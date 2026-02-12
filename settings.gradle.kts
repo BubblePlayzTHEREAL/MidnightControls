@@ -23,6 +23,7 @@ stonecutter {
         }
         mc("fabric", "1.21.11")
         mc("neoforge", "1.21.11")
+        mc("forge", "1.20.1")
     }
     create(rootProject)
 }
