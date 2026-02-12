@@ -100,6 +100,19 @@ dependencies {
         }
         include(spruceui)
     }
+    if (loader == "forge") {
+        "forge"("net.minecraftforge:forge:${minecraft}-${mod.dep("forge_loader")}")
+
+        val mappingsAttribute = Attribute.of("net.minecraft.mappings", String::class.java)
+
+        implementation(spruceui) {
+            attributes {
+                attribute(mappingsAttribute, "mojmap")
+            }
+        }
+
+        include(spruceui)
+    }
     mappings (loom.officialMojangMappings())
 }
 
